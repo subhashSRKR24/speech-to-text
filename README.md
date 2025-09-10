@@ -12,5 +12,7 @@ A simple web application that converts speech into text in real-time using the *
 - **HTML5**
 - **CSS3**
 - **JavaScript (Web Speech API)**
+- [Live Demo](https://your-live-url.com)
+
 
 ## 📂 Project Structure
