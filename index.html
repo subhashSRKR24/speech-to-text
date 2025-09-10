@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Speech to Text</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>🎤 Speech to Text</h1>
+      <p>Click Start and speak. Works best in Chrome/Edge.</p>
+    </header>
+
+    <section class="controls">
+      <div class="row">
+        <label for="lang">Language</label>
+        <select id="lang">
+          <option value="en-IN" selected>English (India)</option>
+          <option value="en-US">English (US)</option>
+          <option value="hi-IN">Hindi (India)</option>
+          <option value="te-IN">Telugu (India)</option>
+          <option value="ta-IN">Tamil (India)</option>
+        </select>
+      </div>
+
+      <div class="row buttons">
+        <button id="toggleBtn" class="primary">Start Listening</button>
+        <button id="clearBtn" class="ghost">Clear</button>
+        <button id="copyBtn" class="ghost">Copy</button>
+        <button id="downloadBtn" class="ghost">Download</button>
+      </div>
+
+      <div class="status">
+        <span class="dot" id="dot"></span>
+        <span id="statusText">Idle</span>
+      </div>
+    </section>
+
+    <section class="output">
+      <div class="cards">
+        <div class="card">
+          <h3>Live Transcript</h3>
+          <textarea id="finalText" placeholder="Your text will appear here..." spellcheck="false"></textarea>
+          <div id="interimText" class="interim"></div>
+          <div class="meta">
+            <span id="wc">Words: 0</span>
+            <span id="cc">Chars: 0</span>
+          </div>
+        </div>
+        <div class="card tips">
+          <h3>Tips</h3>
+          <ul>
+            <li>Allow microphone permission in the browser.</li>
+            <li>Speak clearly for best results.</li>
+            <li>You can change the language anytime.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <small>Built by Subhash • Web Speech API</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
